@@ -1,0 +1,220 @@
+:root {
+    --color-accent: rgba(230, 170, 40)
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+}
+
+/* NAVBAR */
+
+nav {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    background-color: #fff;
+}
+
+.logo {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Waterfall", cursive;
+    font-size: 7em;
+}
+
+.logo a {
+    color: #767676;
+    text-decoration: none;
+}
+
+.logo a img {
+    width: 350px;
+}
+
+.menu {
+    position: absolute;
+
+    width: 60%;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.menu ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    text-transform: uppercase;
+}
+
+.menu ul a {
+    text-decoration: none;
+    color: #000;
+    transition: .3s;
+}
+
+.menu ul li {
+    position: relative;
+    overflow: hidden;
+}
+
+/* JAKBY "li" NIE DZIAŁAŁO ZASTĄPIĆ "a" */
+
+.menu ul li span {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    transform: translateX(-101%);
+    /* transition: .3s; */
+}
+
+/* CONTENT */
+
+.content {
+    margin: 50px auto;
+    width: 80%;
+}
+
+.container-img {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+
+.content-img {
+    width: 100%;
+}
+
+.shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.5;
+}
+
+.container-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    /* backdrop-filter: blur(3px); */
+}
+
+.container-text h2 {
+    font-size: 5em;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    -webkit-text-stroke: 1px #fff;
+    color: transparent;
+}
+
+.container-text p {
+    font-size: 1em;
+    margin: 40px;
+}
+
+/* BUTTON ANIMATION */
+
+.container-text .button {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 20px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.container-text .button:hover {
+    background-color: #fff;
+    color: black;
+    transition-delay: 1s;
+
+}
+
+.container-text .button span {
+    position: absolute;
+    display: block;
+}
+
+
+
+.container-text .button span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #fff);
+
+}
+
+.container-text .button:hover span:nth-child(1) {
+    left: 100%;
+    transition: 1s;
+}
+
+.container-text .button span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #fff);
+
+}
+
+.container-text .button:hover span:nth-child(3) {
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+}
+
+.container-text .button span:nth-child(2) {
+    top: -100%;
+    right: 0%;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #fff);
+
+}
+
+.container-text .button:hover span:nth-child(2) {
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+
+}
+
+.container-text .button span:nth-child(4) {
+    top: 100%;
+    left: 0%;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #fff);
+
+}
+
+.container-text .button:hover span:nth-child(4) {
+    top: -100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+
+}
